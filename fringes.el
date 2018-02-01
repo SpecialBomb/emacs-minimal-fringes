@@ -2,7 +2,7 @@
 ;; BITMAPPER FUNCTION BY:  Nikolaj Schumacher -- https://github.com/nschum/fringe-helper.el
 ;;
 
-(fringe-mode (quote (8 . 8)) nil (fringe))
+(fringe-mode 8)
 
 (defun fringe-helper-convert (&rest strings)
 "Convert STRINGS into a vector usable for `define-fringe-bitmap'.
