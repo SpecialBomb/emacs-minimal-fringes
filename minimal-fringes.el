@@ -1,24 +1,30 @@
-;;; minimal-fringes.el --- Improved fringe symbols for emacs
+;;; minimal-fringes.el --- Improved fringe symbols
 
 ;; Copyright 2018 Quentin Jankosky
 
 ;; Author: Quentin Jankosky
 ;; URL: https://github.com/SpecialBomb/emacs-minimal-fringes
-;; Version: v1
+;; Version: 2
 
 ;; SYMBOLS DESIGNED BY: Quentin Jankosky -- https://github.com/SpecialBomb/emacs-minimal-fringes
 ;; BITMAPPER FUNCTION BY: Nikolaj Schumacher -- https://github.com/nschum/fringe-helper.el
 ;;
 
+;;; Commentary:
+;; This package is made to replace the unappealing
+;; fringe characters that are default within emacs.
+;; The bitmaps were designed to use the default
+;; fringe width of 8 pixels. Increasing or
+;; decreasing it may result in unwanted effects.
 
-(defun fringe-helper-convert (&rest strings)
+(defun minimal-fringes-fringe-helper-convert (&rest strings)
 "Convert STRINGS into a vector usable for `define-fringe-bitmap'.
 Each string in STRINGS represents a line of the fringe bitmap.
 Periods (.) are background-colored pixel; Xs are foreground-colored. The
 fringe bitmap always is aligned to the right. If the fringe has half
 width, only the left 4 pixels of an 8 pixel bitmap will be shown.
 For example, the following code defines a diagonal line.
-\(fringe-helper-convert
+\(minimal-fringes-fringe-helper-convert
 \"XX......\"
 \"..XX....\"
 \"....XX..\"
@@ -35,7 +41,7 @@ For example, the following code defines a diagonal line.
           num))
       strings)))
 
-(define-fringe-bitmap 'right-arrow (fringe-helper-convert
+(define-fringe-bitmap 'right-arrow (minimal-fringes-fringe-helper-convert
   "X......."
   "XX......"
   "XXX....."
@@ -50,7 +56,7 @@ For example, the following code defines a diagonal line.
   "XX......"
   "X.......") nil nil 'center)
 
-(define-fringe-bitmap 'left-arrow (fringe-helper-convert
+(define-fringe-bitmap 'left-arrow (minimal-fringes-fringe-helper-convert
   "......X"
   ".....XX"
   "....XXX"
@@ -65,7 +71,7 @@ For example, the following code defines a diagonal line.
   ".....XX"
   "......X") nil nil 'center)
 
-(define-fringe-bitmap 'left-curly-arrow (fringe-helper-convert
+(define-fringe-bitmap 'left-curly-arrow (minimal-fringes-fringe-helper-convert
   "......."
   "......."
   ".....X."
@@ -80,7 +86,7 @@ For example, the following code defines a diagonal line.
   "......."
   ".......") nil nil 'center)
 
-(define-fringe-bitmap 'right-curly-arrow (fringe-helper-convert
+(define-fringe-bitmap 'right-curly-arrow (minimal-fringes-fringe-helper-convert
   "........"
   "........"
   ".X......"
@@ -95,7 +101,7 @@ For example, the following code defines a diagonal line.
   "........"
   "........") nil nil 'center)
 
-(define-fringe-bitmap 'right-triangle (fringe-helper-convert
+(define-fringe-bitmap 'right-triangle (minimal-fringes-fringe-helper-convert
   ".......X"
   "......X."
   ".....XXX"
@@ -110,7 +116,7 @@ For example, the following code defines a diagonal line.
   "......X."
   ".......X") nil nil 'center)
 
-(define-fringe-bitmap 'right-triangle (fringe-helper-convert
+(define-fringe-bitmap 'right-triangle (minimal-fringes-fringe-helper-convert
   "X......."
   ".X......"
   "XXX....."
@@ -125,4 +131,5 @@ For example, the following code defines a diagonal line.
   ".X......"
   "X.......") nil nil 'center)
 
+(provide 'minimal-fringes)
 ;;; minimal-fringes.el ends here
