@@ -42,6 +42,7 @@ For example, the following code defines a diagonal line.
       strings)))
 
 (defun minimal-fringes-init ()
+"Initialize the minimal bitmaps"
 (interactive)  
 (define-fringe-bitmap 'right-arrow (minimal-fringes-fringe-helper-convert
   "X......."
