@@ -1,4 +1,4 @@
-;;; minimal-fringes.el --- Minimal fringes for emacs
+;;; minimal-fringes.el --- Improved fringe symbols for emacs
 
 ;; Copyright 2018 Quentin Jankosky
 
@@ -10,7 +10,6 @@
 ;; BITMAPPER FUNCTION BY: Nikolaj Schumacher -- https://github.com/nschum/fringe-helper.el
 ;;
 
-;;(fringe-mode 8) ;; Uncomment this line for intended usage
 
 (defun fringe-helper-convert (&rest strings)
 "Convert STRINGS into a vector usable for `define-fringe-bitmap'.
