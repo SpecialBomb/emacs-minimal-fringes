@@ -135,7 +135,7 @@ For example, the following code defines a diagonal line.
 )
 
 ;;;###autoload
-(minimal-fringes-init)
+(add-hook `emacs-startup-hook `minimal-fringes-init)
 
 (provide 'minimal-fringes)
 ;;; minimal-fringes.el ends here
