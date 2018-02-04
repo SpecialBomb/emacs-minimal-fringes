@@ -42,97 +42,92 @@ For example, the following code defines a diagonal line.
       strings)))
 
 (defun minimal-fringes-init ()
-"Initialize the minimal bitmaps"
-(interactive)  
-(define-fringe-bitmap 'right-arrow (minimal-fringes-fringe-helper-convert
-  "X......."
-  "XX......"
-  "XXX....."
-  "XXXX...."
-  "XXXXX..."
-  "XXXXXX.."
-  "XXXXXXX."
-  "XXXXXX.."
-  "XXXXX..."
-  "XXXX...."
-  "XXX....."
-  "XX......"
-  "X.......") nil nil 'center)
-
-(define-fringe-bitmap 'left-arrow (minimal-fringes-fringe-helper-convert
-  "......X"
-  ".....XX"
-  "....XXX"
-  "...XXXX"
-  "..XXXXX"
-  ".XXXXXX"
-  "XXXXXXX"
-  ".XXXXXX"
-  "..XXXXX"
-  "...XXXX"
-  "....XXX"
-  ".....XX"
-  "......X") nil nil 'center)
-
-(define-fringe-bitmap 'left-curly-arrow (minimal-fringes-fringe-helper-convert
-  "......."
-  "......."
-  ".....X."
-  "....X.."
-  "...X..."
-  "..X...."
-  ".X...X."
-  "..X..X."
-  "...X.X."
-  "....XX."
-  ".XXXXX."
-  "......."
-  ".......") nil nil 'center)
-
-(define-fringe-bitmap 'right-curly-arrow (minimal-fringes-fringe-helper-convert
-  "........"
-  "........"
-  ".X......"
-  "..X....."
-  "...X...."
-  "....X..."
-  ".X...X.."
-  ".X..X..."
-  ".X.X...."
-  ".XX....."
-  ".XXXXX.."
-  "........"
-  "........") nil nil 'center)
-
-(define-fringe-bitmap 'right-triangle (minimal-fringes-fringe-helper-convert
-  ".......X"
-  "......X."
-  ".....XXX"
-  "....X..."
-  "...XXXXX"
-  "..X....."
-  ".XXXXXXX"
-  "..X....."
-  "...XXXXX"
-  "....X..."
-  ".....XXX"
-  "......X."
-  ".......X") nil nil 'center)
-
-(define-fringe-bitmap 'right-triangle (minimal-fringes-fringe-helper-convert
-  "X......."
-  ".X......"
-  "XXX....."
-  "...X...."
-  "XXXXX..."
-  ".....X.."
-  "XXXXXXX."
-  ".....X.."
-  "XXXXX..."
-  "...X...."
-  "XXX....."
-  ".X......"
-  "X.......") nil nil 'center)
+  "Initialize the minimal bitmaps"
+  (interactive)
+  (define-fringe-bitmap 'right-arrow (minimal-fringes-fringe-helper-convert
+				      "X......."
+				      "XX......"
+				      "XXX....."
+				      "XXXX...."
+				      "XXXXX..."
+				      "XXXXXX.."
+				      "XXXXXXX."
+				      "XXXXXX.."
+				      "XXXXX..."
+				      "XXXX...."
+				      "XXX....."
+				      "XX......"
+				      "X.......") nil nil 'center)
+  (define-fringe-bitmap 'left-arrow (minimal-fringes-fringe-helper-convert
+				     "......X"
+				     ".....XX"
+				     "....XXX"
+				     "...XXXX"
+				     "..XXXXX"
+				     ".XXXXXX"
+				     "XXXXXXX"
+				     ".XXXXXX"
+				     "..XXXXX"
+				     "...XXXX"
+				     "....XXX"
+				     ".....XX"
+				     "......X") nil nil 'center)
+  (define-fringe-bitmap 'left-curly-arrow (minimal-fringes-fringe-helper-convert
+				     "......."
+				     "......."
+				     ".....X."
+				     "....X.."
+				     "...X..."
+				     "..X...."
+				     ".X...X."
+				     "..X..X."
+				     "...X.X."
+				     "....XX."
+				     ".XXXXX."
+				     "......."
+				     ".......") nil nil 'center)
+  (define-fringe-bitmap 'right-curly-arrow (minimal-fringes-fringe-helper-convert
+				     "........"
+				     "........"
+				     ".X......"
+				     "..X....."
+				     "...X...."
+				     "....X..."
+				     ".X...X.."
+				     ".X..X..."
+				     ".X.X...."
+				     ".XX....."
+				     ".XXXXX.."
+				     "........"
+				     "........") nil nil 'center)
+  (define-fringe-bitmap 'right-triangle (minimal-fringes-fringe-helper-convert
+				     ".......X"
+				     "......X."
+				     ".....XXX"
+				     "....X..."
+				     "...XXXXX"
+				     "..X....."
+				     ".XXXXXXX"
+				     "..X....."
+				     "...XXXXX"
+				     "....X..."
+				     ".....XXX"
+				     "......X."
+				     ".......X") nil nil 'center)
+  (define-fringe-bitmap 'right-triangle (minimal-fringes-fringe-helper-convert
+				     "X......."
+				     ".X......"
+				     "XXX....."
+				     "...X...."
+				     "XXXXX..."
+				     ".....X.."
+				     "XXXXXXX."
+				     ".....X.."
+				     "XXXXX..."
+				     "...X...."
+				     "XXX....."
+				     ".X......"
+				     "X.......") nil nil 'center)
 )
 
 ;;;###autoload
