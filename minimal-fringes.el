@@ -41,6 +41,8 @@ For example, the following code defines a diagonal line.
           num))
       strings)))
 
+(defun minimal-fringes-init ()
+(interactive)  
 (define-fringe-bitmap 'right-arrow (minimal-fringes-fringe-helper-convert
   "X......."
   "XX......"
@@ -130,6 +132,10 @@ For example, the following code defines a diagonal line.
   "XXX....."
   ".X......"
   "X.......") nil nil 'center)
+)
+
+;;;###autoload
+(minimal-fringes-init)
 
 (provide 'minimal-fringes)
 ;;; minimal-fringes.el ends here
