@@ -1,8 +1,16 @@
+;;; minimal-fringes.el --- Minimal fringes for emacs
+
+;; Copyright 2018 Quentin Jankosky
+
+;; Author: Quentin Jankosky
+;; URL: https://github.com/SpecialBomb/emacs-minimal-fringes
+;; Version: v1
+
 ;; SYMBOLS DESIGNED BY: Quentin Jankosky -- https://github.com/SpecialBomb/emacs-minimal-fringes
-;; BITMAPPER FUNCTION BY:  Nikolaj Schumacher -- https://github.com/nschum/fringe-helper.el
+;; BITMAPPER FUNCTION BY: Nikolaj Schumacher -- https://github.com/nschum/fringe-helper.el
 ;;
 
-(fringe-mode 8)
+;;(fringe-mode 8) ;; Uncomment this line for intended usage
 
 (defun fringe-helper-convert (&rest strings)
 "Convert STRINGS into a vector usable for `define-fringe-bitmap'.
@@ -118,3 +126,4 @@ For example, the following code defines a diagonal line.
   ".X......"
   "X.......") nil nil 'center)
 
+;;; minimal-fringes.el ends here
